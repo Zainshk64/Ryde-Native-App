@@ -24,7 +24,7 @@ const _layout = () => {
     <Tabs
     screenOptions={{
       headerShown: false,
-      tabBarShowLabel: false,
+      tabBarShowLabel: true,
       tabBarStyle: {
         position: 'absolute',
         bottom: 13,
