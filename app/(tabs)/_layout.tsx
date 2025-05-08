@@ -1,7 +1,6 @@
 import { View, Text, Image } from 'react-native'
 import React from 'react'
 import { Tabs } from 'expo-router'
-import tw from 'twrnc'
 import homeic from '../../assets/icons/home.png'
 import hisic from '../../assets/icons/list.png'
 import chatic from '../../assets/icons/chat.png'
