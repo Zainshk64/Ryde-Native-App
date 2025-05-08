@@ -7,7 +7,9 @@ import tw from 'twrnc';
 export default function Layout() {
   return (
     <View style={tw`flex-1 bg-white`}>
-      <StatusBar style="dark" backgroundColor="#ffffff" />
+      {/* <StatusBar style="light" backgroundColor="#000" /> */}
+      <StatusBar style="dark" backgroundColor="#fff" />
+
       <Slot /> {/* Loads the current route's screen */}
     </View>
   );

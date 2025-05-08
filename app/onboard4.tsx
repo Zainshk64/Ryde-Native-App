@@ -1,4 +1,4 @@
-import { Image, ScrollView, ScrollViewBase, Text, View } from 'react-native'
+import { Image, ScrollView, Text, View } from 'react-native'
 import React from 'react'
 import tw from 'twrnc'
 import OnBoardText from '@/components/OnBoardText'
@@ -20,7 +20,7 @@ const onboard4 = () => {
           />
 
         </View>
-        <Buttons text={'Sign Up'} href={'/onboard4'} />
+        <Buttons text={'Sign Up'} href={'/(auth)/signup'} />
         <View style={tw`flex px-10 text-black flex-row gap-4 items-center justify-center`} >
           <View style={tw`h-1 bg-gray-200 w-1/2 `} ></View>
           <View><Text>Or</Text></View>
@@ -30,13 +30,13 @@ const onboard4 = () => {
         <View style={tw` flex flex-row border gap-2 rounded-full border-neutral-300 items-center justify-center py-2.5 `} >
           <View>
 
-            <Image style={tw`h-8 w-8`} source={require('../assets/icons/google.png')} />
+            <Image style={tw`h-7 w-7`} source={require('../assets/icons/google.png')} />
           </View>
           <Text> Log in With Google</Text>
         </View>
 
         <View>
-          <Text style={tw`text-center`} >Already Have An Account <Link style={tw`text-blue-500`} href={'/onboard4'}>Sign In</Link></Text>
+          <Text style={tw`text-center`} >Already Have An Account <Link style={tw`text-blue-500`} href={'/(auth)/signin'}>Sign In</Link></Text>
         </View>
       </View>
     </ScrollView>
