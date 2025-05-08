@@ -6,7 +6,7 @@ import tw from 'twrnc'
 const Buttons = ({text, href}) => {
   return (
     <View  >
-      <Link  href={href}  style={tw` mt-10 w-full bg-blue-500 py-2.5 rounded-full text-center text-white text-lg`} >{text}</Link>
+      <Link  href={href}  style={tw` mt-5 w-full bg-blue-500 py-2.5 rounded-full text-center text-white text-lg`} >{text}</Link>
     </View>
   )
 }

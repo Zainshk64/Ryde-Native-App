@@ -5,6 +5,7 @@ import OnBoardText from '@/components/OnBoardText'
 import Buttons from '@/components/Buttons'
 import { Link } from 'expo-router'
 import InputFields from '@/components/InputFields'
+import Popup from '@/components/Popup'
 
 const signin = () => {
     const [isPop, setIsPop] = useState(false);
@@ -23,11 +24,8 @@ const signin = () => {
                     <InputFields label={'EmaiL'} done={false} placeholder={"Enter your Email"} icon={require('../../assets/icons/email.png')} />
                     <InputFields label={'Password'} done={true} placeholder={"Enter your Password"} icon={require('../../assets/icons/lock.png')} />
 
-
-
                 </View>
                 <Pressable onPress={toggle} >
-
                     <Buttons text={'Sign In'} href={'/(auth)/signin'} />
                 </Pressable>
                 <View style={tw`flex px-10 text-black my-4 flex-row gap-4 items-center justify-center`} >
@@ -51,7 +49,7 @@ const signin = () => {
                 {/* popup */}
             </View>
             {
-                isPop && <Popup isPop={isPop} setIsPop={setIsPop} />
+                isPop ? <Popup isPop={isPop} setIsPop={setIsPop} /> : <></>
             }
 
         </ScrollView>
@@ -60,23 +58,3 @@ const signin = () => {
 }
 
 export default signin;
-
-
-export const Popup = ({isPop, setIsPop}) => {
-    return (
-        <View style={tw`bg-[rgba(0,0,0,0.45)] absolute top-0 bottom-0 flex flex-col px-3 w-full justify-center items-center`} >
-            <View style={tw`bg-white rounded-md flex  flex-col w-full justify-center items-center w-full py-10`} >
-                <Image source={require('../../assets/icons/check.png')} style={tw`h-15 w-15 bg-green-500 mx-auto rounded-full`} />
-                <Text style={tw`my-3 font-medium`} >Verified</Text>
-                <Text style={tw`text-gray-500`} >You're Logged In Successfully</Text>
-                <View style={tw`w-full px-5`} >
-                    <Pressable onPress={()=>setIsPop(!isPop)} >
-
-                <Buttons text={"Browse Home"} href={'/(tabs)/home'} />
-                    </Pressable>
-                </View>
-            </View>
-        </View>
-    )
-
-}
