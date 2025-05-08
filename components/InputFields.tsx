@@ -10,7 +10,7 @@ const InputFields = ({label , placeholder , icon , done}) => {
       <View style={tw`flex flex-row bg-gray-100 border p-2 items-center border-neutral-300 rounded-lg`} >
         <Image style={tw`h-6 w-6`} source={icon}
          />
-        <TextInput  secureTextEntry={done} placeholder={placeholder} style={tw` p-2 rounded-r-full flex-1 outline-neutral-100 w-full `}
+        <TextInput  secureTextEntry={done} placeholder={placeholder} style={tw` p-2 rounded-r-full flex-1 w-full `}
         />
       </View>
     </View>

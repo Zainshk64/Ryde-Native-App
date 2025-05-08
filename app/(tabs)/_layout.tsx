@@ -37,7 +37,7 @@ const _layout = () => {
         backgroundColor: 'rgba(0, 0, 0, 0.9)',
         borderTopWidth: 0,
       },
-      tabBarActiveTintColor: '',
+      tabBarActiveTintColor: 'white',
       tabBarInactiveTintColor: 'gray',
     }}
   >
